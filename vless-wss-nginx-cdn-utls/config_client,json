@@ -1,0 +1,65 @@
+{
+  "log": {},
+  "inbounds": [
+    {
+      "port": "10808",
+      "protocol": "socks",
+      "settings": {
+        "auth": "noauth",
+        "udp": true
+      }
+    },
+    {
+      "port": "10809",
+      "protocol": "http",
+      "settings": {}
+    }
+  ],
+  "outbounds": [
+    {
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "webgl.example.com",
+            "port": 443,
+            "users": [
+              {
+                "id": "b28d21bf-037a-4a19-a3e6-45a409bbd21f",
+                "encryption": "none"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "tlsSettings" : {
+          "serverName" : "webgl.example.com",
+          "fingerprint": "chrome"
+        },
+        "wsSettings": {
+          "path": "/uig3pkig"
+        }
+      }
+    },
+    {
+      "tag": "direct",
+      "protocol": "freedom",
+      "settings": {}
+    }
+  ],
+  "routing": {
+    "domainStrategy": "IPOnDemand",
+    "rules": [
+      {
+        "type": "field",
+        "ip": [
+          "geoip:private"
+        ],
+        "outboundTag": "direct"
+      }
+    ]
+  }
+}
