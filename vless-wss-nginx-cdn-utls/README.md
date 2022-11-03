@@ -90,7 +90,7 @@ certbot renew --dry-run
 
 ## Xray server
 
-Right now, uTLS is in a release, but Vision is in an experimental prerelease. Therefore we request specifically version `1.6.2` at this time.
+We will requestion the latest version (`1.6.2` at this time) so that we get the most recent pre-release features. We want to run as `root` to access the SSL certificate private key.
 
 ```
 bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release.sh)" @ install -u root --version 1.6.2
