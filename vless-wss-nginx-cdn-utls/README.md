@@ -90,7 +90,7 @@ certbot renew --dry-run
 
 ## Xray server
 
-We will requestion the latest version (`1.6.2` at this time) so that we get the most recent pre-release features. We want to run as `root` to access the SSL certificate private key.
+We will request the latest version (`1.6.2` at this time) so that we get the most recent prerelease features. We want to run as `root` to access the SSL certificate private key.
 
 ```
 bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release.sh)" @ install -u root --version 1.6.2
