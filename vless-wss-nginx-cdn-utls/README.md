@@ -118,7 +118,7 @@ Edit Nginx configuration file:
 vi /etc/nginx/sites-available/default
 ```
 
-Add a `location` block for the secret path. The final Nginx configuration file should be similar to the example `**nginx.conf**`.
+Add a `location` block for the secret path. The final Nginx configuration file should be similar to the example **`nginx.conf`**.
 
 Edit the Xray server configuration file:
 
@@ -126,7 +126,7 @@ Edit the Xray server configuration file:
 vi /usr/local/etc/xray/config.json
 ```
 
-Delete the dummy line and insert a configuration similar to the example `**config_server.json**`.
+Delete the dummy line and insert a configuration similar to the example **`config_server.json`**.
 
 Restart Xray and Nginx:
 
@@ -146,7 +146,7 @@ exit
 
 Download and unzip the corresponding version of the client. Right now it will come from [https://github.com/XTLS/Xray-core/releases/tag/v1.6.2](https://github.com/XTLS/Xray-core/releases/tag/v1.6.2).
 
-Configure a client configuration file `config.json` in the same folder as the binary. Use `**config_client.json**` as a template.
+Configure a client configuration file `config.json` in the same folder as the binary. Use **`config_client.json`** as a template.
 
 Start the proxy client running:
 
