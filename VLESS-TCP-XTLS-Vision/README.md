@@ -16,7 +16,7 @@ bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release
 curl -Lo /usr/local/etc/xray/config.json https://raw.githubusercontent.com/seakfind/examples/main/VLESS-TCP-XTLS-Vision/config_server.json
 ```
 
-3. Certificate and private key
+3. Obtain SSL certificate and private key
 
 You first need to buy a domain name, then add a subdomain and point the subdomain to the IP of your VPS. Wait 5-10 minutes for DNS resolution to take effect. You can check if the returned IP is correct by pinging your subdomain. After confirming that the DNS resolution has taken effect, execute the following commands (execute each command in sequence).
 
@@ -60,7 +60,7 @@ SSL certificates are valid for 90 days and are automatically renewed every 60 da
 
 To back up the applied SSL certificate: Use WinSCP to log in to your VPS, enter the `/etc/ssl/private/` directory, and download the certificate file `fullchain.cer` and the private key file `private.key`. To restore, rename the certificate file to `fullchain.cer` and the private key file to `private.key`, log in to your VPS using WinSCP, upload them to the `/etc/ssl/private/` directory and execute the following command: `chown -R nobody:nogroup /etc/ssl/private/`. See [Insufficient privileges when using certificates](https://github.com/v2fly/fhs-install-v2ray/wiki/Insufficient-permissions-when-using-certificates-zh-Hans-CN).
 
-4. Starting program
+4. Start the Xray service
 
 ```
 systemctl restart xray
@@ -98,7 +98,7 @@ Tip: As long as the certificate is valid, the domain name contained in the certi
 
 ## v2rayNG configuration guide
 
-For v2rayNG version >= 1.7.24.
+Use v2rayNG version >= 1.7.24.
 
 地址(address) `VPS的IP`
 <br/>
