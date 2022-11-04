@@ -13,12 +13,10 @@ bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release
 2. Download configuratiojn
 
 ```
-curl -Lo /usr/local/etc/xray/config.json https://raw.githubusercontent.com/chika0801/Xray-examples/main/VLESS-TCP-XTLS-Vision/config_server.json
+curl -Lo /usr/local/etc/xray/config.json https://raw.githubusercontent.com/seakfind/examples/main/VLESS-TCP-XTLS-Vision/config_server.json
 ```
 
 3. Upload certificate and private key
-
-- [Apply for SSL certificate with acme](https://github.com/chika0801/Xray-install#1%E7%94%A8acme%E7%94%B3%E8%AF%B7-ssl-%E8%AF%81%E4%B9%A6)
 
 You first need to buy a domain name, then add a subdomain and point the subdomain to the IP of your VPS. Wait 5-10 minutes for DNS resolution to take effect. You can check if the returned IP is correct by pinging your subdomain. After confirming that the DNS resolution takes effect, execute the following commands (execute each command in sequence).
 
@@ -81,7 +79,7 @@ systemctl start xray
 systemctl status xray
 ```
 
-- Configure `/usr/local/etc/xray/config.json`
+- Configuration `/usr/local/etc/xray/config.json`
 - Certificate `/etc/ssl/private/fullchain.cer`
 - Private key `/etc/ssl/private/private.key`
 - View logs `journalctl -u xray --output cat -e`
