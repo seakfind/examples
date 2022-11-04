@@ -86,7 +86,7 @@ You will need releases of v2rayN (>= 5.38) and Xray-core (>= 1.6.2) that include
 
 ## Custom configuration
 
-1. Download client configuration [config_client.json](https://raw.githubusercontent.com/chika0801/Xray-examples/main/VLESS-TCP-XTLS-Vision/config_client.json)
+1. Download client configuration [config_client.json](https://raw.githubusercontent.com/seakfind/examples/main/VLESS-TCP-XTLS-Vision/config_client.json)
 
 2. Find `"address": ""`, and enter the IP address of the VPS between the `""`. Find `"serverName": ""`, and enter the domain name included in the certificate between the `""`.
 
@@ -94,7 +94,7 @@ You will need releases of v2rayN (>= 5.38) and Xray-core (>= 1.6.2) that include
 
 ![1](https://user-images.githubusercontent.com/88967758/199512235-7f7d78a6-e27d-4db8-b6f5-7ef4212f1af9.jpg)
 
-Tip: As long as the certificate is valid, the domain name contained in the certificate does not need to be resolved to the VPS IP. One certificate, used on multiple VPS.
+Tip: As long as the certificate is valid, the domain name contained in the certificate does not need to be resolved to the VPS IP. One certificate and be used on multiple VPS.
 
 ## v2rayNG Configuration guide
 
