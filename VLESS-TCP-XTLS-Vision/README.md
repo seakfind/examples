@@ -58,14 +58,9 @@ chown -R nobody:nogroup /etc/ssl/private/
 
 SSL certificates are valid for 90 days and are automatically renewed every 60 days. The rate limit is exceeded, and an error will be reported.
 
-To back up the applied SSL certificate: Use WinSCP to log in to your VPS, enter the `/etc/ssl/private/` directory, and download the certificate file `fullchain.cer` and the private key file `private.key`. To restore, rename the certificate file to `fullchain.cer` and the private key file to `private.key`, log in to your VPS using WinSCP, upload them to the `/etc/ssl/private/` directory and execute the following command.
+To back up the applied SSL certificate: Use WinSCP to log in to your VPS, enter the `/etc/ssl/private/` directory, and download the certificate file `fullchain.cer` and the private key file `private.key`. To restore, rename the certificate file to `fullchain.cer` and the private key file to `private.key`, log in to your VPS using WinSCP, upload them to the `/etc/ssl/private/` directory and execute the following command: `chown -R nobody:nogroup /etc/ssl/private/`
 
-```
-chown -R nobody:nogroup /etc/ssl/private/
-```
-
-- [Insufficient privileges when using certificates](https://github.com/v2fly/fhs-install-v2ray/wiki/Insufficient-permissions-when-using-certificates-zh-Hans-CN)
-
+[Insufficient privileges when using certificates](https://github.com/v2fly/fhs-install-v2ray/wiki/Insufficient-permissions-when-using-certificates-zh-Hans-CN)
 
 4. Starting program
 
