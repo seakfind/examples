@@ -88,7 +88,7 @@ Note: You will need a release of https://github.com/2dust/v2rayN/releases that i
 
 1. Download client configuration [config_client.json](https://raw.githubusercontent.com/chika0801/Xray-examples/main/VLESS-TCP-XTLS-Vision/config_client.json)
 
-2. Find `"address": ""`, enter the IP of the VPS in the middle of `""`. Find `"serverName": ""`, enter the domain name included in the certificate in the middle of `""`.
+2. Find `"address": ""`, and enter the IP address of the VPS between the `""`. Find `"serverName": ""`, and enter the domain name included in the certificate between the `""`.
 
 3. `Server` ——> `Add Custom Configuration Server` ——> `Browse(B)` ——> `Select Client Configuration` ——> `Core Type Xray` ——> `Socks Port 0`
 
