@@ -76,7 +76,9 @@ systemctl status xray
 - View logs `journalctl -u xray --output cat -e`
 - Real-time log `journalctl -u xray --output cat -f`
 
-## v2rayN Configuration guide
+## v2rayN configuration guide
+
+Note: You will need a release of https://github.com/2dust/v2rayN/releases that includes `xtls-rprx-vision`, for example, release 5.38.
 
 1. `Servers` ——> `Add [VLESS] server`
 
