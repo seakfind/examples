@@ -78,7 +78,7 @@ systemctl status xray
 
 ## v2rayN configuration guide
 
-Note: You will need a release of https://github.com/2dust/v2rayN/releases that includes `xtls-rprx-vision`, for example, release 5.38.
+Note: You will need a [release of v2rayN](https://github.com/2dust/v2rayN/releases) that includes `xtls-rprx-vision` -- for example, release 5.38.
 
 1. `Servers` ——> `Add [VLESS] server`
 
@@ -90,7 +90,7 @@ Note: You will need a release of https://github.com/2dust/v2rayN/releases that i
 
 2. Find `"address": ""`, and enter the IP address of the VPS between the `""`. Find `"serverName": ""`, and enter the domain name included in the certificate between the `""`.
 
-3. `Server` ——> `Add Custom Configuration Server` ——> `Browse(B)` ——> `Select Client Configuration` ——> `Core Type Xray` ——> `Socks Port 0`
+3. `Server` ——> `Add a custom configuration server` ——> `Browse(B)` ——> `Select Client Configuration` ——> `Core Type Xray` ——> `Socks Port 0`
 
 ![1](https://user-images.githubusercontent.com/88967758/199512235-7f7d78a6-e27d-4db8-b6f5-7ef4212f1af9.jpg)
 
