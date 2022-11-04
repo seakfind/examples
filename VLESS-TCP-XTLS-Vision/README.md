@@ -4,7 +4,7 @@ Forked from https://github.com/chika0801/Xray-examples/tree/main/VLESS-TCP-XTLS-
 
 ## [XTLS Vision](https://github.com/XTLS/Xray-core/discussions/1295) Installation guide
 
-1. Install
+1. Install Xray
 
 ```
 bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release.sh)" @ install --beta
@@ -90,13 +90,15 @@ You will need releases of v2rayN (>= 5.38) and Xray-core (>= 1.6.2) that include
 
 2. Find `"address": ""`, and enter the IP address of the VPS between the `""`. Find `"serverName": ""`, and enter the domain name included in the certificate between the `""`.
 
-3. `Server` ——> `Add a custom configuration server` ——> `Browse(B)` ——> `Select Client Configuration` ——> `Core Type Xray` ——> `Socks Port 0`
+3. `Server` ——> `Add a custom configuration server` ——> `Browse(B)` ——> `Select client configuration` ——> `Core type Xray` ——> `Socks port 0`
 
 ![1](https://user-images.githubusercontent.com/88967758/199512235-7f7d78a6-e27d-4db8-b6f5-7ef4212f1af9.jpg)
 
 Tip: As long as the certificate is valid, the domain name contained in the certificate does not need to resolve to the VPS IP address. One certificate can be used on multiple VPS.
 
-## v2rayNG Configuration guide
+## v2rayNG configuration guide
+
+For v2rayNG version >= 1.7.24.
 
 地址(address) `VPS的IP`
 <br/>
