@@ -22,7 +22,7 @@ curl -Lo /usr/local/etc/xray/config.json https://raw.githubusercontent.com/chika
 
 You first need to buy a domain name, then add a subdomain and point the subdomain to the IP of your VPS. Wait 5-10 minutes for DNS resolution to take effect. You can check if the returned IP is correct by pinging your subdomain. After confirming that the DNS resolution takes effect, execute the following commands (execute each command in sequence).
 
-Note: Replace chika.example.com with your subdomain.
+Note: Replace `chika.example.com` with your subdomain.
 
 ```
 apt install -y socat
