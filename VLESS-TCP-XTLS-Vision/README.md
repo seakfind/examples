@@ -100,7 +100,7 @@ Tip: As long as the certificate is valid, the domain name contained in the certi
 
 Use v2rayNG version >= 1.7.24.
 
-地址(address) `VPS的IP`
+地址(address) `VPS IP address`
 <br/>
 端口(port) `16387`
 <br/>
@@ -112,4 +112,4 @@ Use v2rayNG version >= 1.7.24.
 <br/>
 传输层安全(tls) `tls`
 <br/>
-SNI `证书中包含的域名`
+SNI `Domain name included in the certificate`
