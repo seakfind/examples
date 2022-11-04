@@ -63,7 +63,7 @@ To back up the applied SSL certificate: Use WinSCP to log in to your VPS, enter 
 4. Starting program
 
 ```
-systemctl start xray
+systemctl restart xray
 ```
 
 ```
