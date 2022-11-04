@@ -2,7 +2,7 @@
 
 Forked from https://github.com/chika0801/Xray-examples/tree/main/VLESS-TCP-XTLS-Vision
 
-## [XTLS Vision](https://github.com/XTLS/Xray-core/discussions/1295)安装指南
+## [XTLS Vision](https://github.com/XTLS/Xray-core/discussions/1295) Installation guide
 
 1. Installation guide
 
@@ -65,7 +65,7 @@ Tip: As long as the certificate is valid, the domain name contained in the certi
 
 地址(address) `VPS的IP`
 <br/>
-端口(prot) `16387`
+端口(port) `16387`
 <br/>
 用户ID(id) `chika`
 <br/>
