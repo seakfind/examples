@@ -4,21 +4,21 @@ Forked from https://github.com/chika0801/Xray-examples/tree/main/VLESS-TCP-XTLS-
 
 ## [XTLS Vision](https://github.com/XTLS/Xray-core/discussions/1295) Installation guide
 
-1. Installation guide
+1. Install
 
 ```
 bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release.sh)" @ install --beta
 ```
 
-2. Download configuratiojn
+2. Download configuration
 
 ```
 curl -Lo /usr/local/etc/xray/config.json https://raw.githubusercontent.com/seakfind/examples/main/VLESS-TCP-XTLS-Vision/config_server.json
 ```
 
-3. Upload certificate and private key
+3. Certificate and private key
 
-You first need to buy a domain name, then add a subdomain and point the subdomain to the IP of your VPS. Wait 5-10 minutes for DNS resolution to take effect. You can check if the returned IP is correct by pinging your subdomain. After confirming that the DNS resolution takes effect, execute the following commands (execute each command in sequence).
+You first need to buy a domain name, then add a subdomain and point the subdomain to the IP of your VPS. Wait 5-10 minutes for DNS resolution to take effect. You can check if the returned IP is correct by pinging your subdomain. After confirming that the DNS resolution has taken effect, execute the following commands (execute each command in sequence).
 
 Note: Replace `chika.example.com` with your subdomain.
 
