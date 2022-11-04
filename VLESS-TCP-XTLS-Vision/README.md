@@ -18,6 +18,50 @@ curl -Lo /usr/local/etc/xray/config.json https://raw.githubusercontent.com/chika
 
 3. Upload certificate and private key
 
+- [Apply for SSL certificate with acme](https://github.com/chika0801/Xray-install#1%E7%94%A8acme%E7%94%B3%E8%AF%B7-ssl-%E8%AF%81%E4%B9%A6)
+
+You first need to buy a domain name, then add a subdomain and point the subdomain to the IP of your VPS. Wait 5-10 minutes for DNS resolution to take effect. You can check if the returned IP is correct by pinging your subdomain. After confirming that the DNS resolution takes effect, execute the following commands (execute each command in sequence).
+
+Note: Replace chika.example.com with your subdomain.
+
+```
+apt install -y socat
+```
+
+```
+curl https://get.acme.sh | sh
+```
+
+```
+alias acme.sh=~/.acme.sh/acme.sh
+```
+
+```
+acme.sh --upgrade --auto-upgrade
+```
+
+```
+acme.sh --set-default-ca --server letsencrypt
+```
+
+```
+acme.sh --issue -d chika.example.com --standalone --keylength ec-256
+```
+
+```
+acme.sh --install-cert -d chika.example.com --ecc \
+--fullchain-file /etc/ssl/private/fullchain.cer \
+--key-file /etc/ssl/private/private.key
+```
+
+```
+chown -R nobody:nogroup /etc/ssl/private/
+```
+
+Backup the applied SSL certificate: use WinSCP to log in to your VPS, enter the /etc/ssl/private/ directory, and download the certificate file fullchain.cer and the private key file private.key.
+
+SSL certificates are valid for 90 days and are automatically renewed every 60 days. The rate limit is exceeded, and an error will be reported.
+
 - Rename the certificate file to `fullchain.cer` and the private key file to `private.key`, log into your VPS using WinSCP, upload them to the `/etc/ssl/private/` directory and execute the following command.
 
 ```
@@ -25,7 +69,7 @@ chown -R nobody:nogroup /etc/ssl/private/
 ```
 
 - [Insufficient privileges when using certificates](https://github.com/v2fly/fhs-install-v2ray/wiki/Insufficient-permissions-when-using-certificates-zh-Hans-CN)
-- [Apply for SSL certificate with acme](https://github.com/chika0801/Xray-install#1%E7%94%A8acme%E7%94%B3%E8%AF%B7-ssl-%E8%AF%81%E4%B9%A6)
+
 
 4. Starting program
 
