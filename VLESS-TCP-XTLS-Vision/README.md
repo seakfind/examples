@@ -56,11 +56,9 @@ acme.sh --install-cert -d chika.example.com --ecc \
 chown -R nobody:nogroup /etc/ssl/private/
 ```
 
-Backup the applied SSL certificate: use WinSCP to log in to your VPS, enter the `/etc/ssl/private/` directory, and download the certificate file `fullchain.cer` and the private key file `private.key`.
-
 SSL certificates are valid for 90 days and are automatically renewed every 60 days. The rate limit is exceeded, and an error will be reported.
 
-- Rename the certificate file to `fullchain.cer` and the private key file to `private.key`, log into your VPS using WinSCP, upload them to the `/etc/ssl/private/` directory and execute the following command.
+To back up the applied SSL certificate: Use WinSCP to log in to your VPS, enter the `/etc/ssl/private/` directory, and download the certificate file `fullchain.cer` and the private key file `private.key`. To restore, rename the certificate file to `fullchain.cer` and the private key file to `private.key`, log in to your VPS using WinSCP, upload them to the `/etc/ssl/private/` directory and execute the following command.
 
 ```
 chown -R nobody:nogroup /etc/ssl/private/
