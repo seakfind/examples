@@ -78,11 +78,11 @@ systemctl status xray
 
 ## v2rayN configuration guide
 
-You will need releases of v2rayN and Xray-core that include the Vision feature.
+You will need releases of v2rayN (>= 5.38) and Xray-core (>= 1.6.2) that include the Vision feature.
 
 1. `Servers` ——> `Add [VLESS] server`
 
-![1](https://user-images.githubusercontent.com/88967758/199511522-f3d26687-34df-48c7-bff4-b5d1784ecca5.jpg)
+![v2rayn-xtls-rprx-vision.png](v2rayn-xtls-rprx-vision.png)
 
 ## Custom configuration
 
