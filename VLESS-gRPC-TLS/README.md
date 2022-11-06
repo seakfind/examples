@@ -126,7 +126,33 @@ systemctl status xray
 
 ### 10. Reconfigure web server
 
+```
+curl -Lo /etc/nginx/sites-available/nginx.conf https://raw.githubusercontent.com/seakfind/examples/main/VLESS-gRPC-TLS/nginx.conf
+```
+
+Edit `/etc/nginx/sites-available/default`.
+
+```
+vi /etc/nginx/sites-available/default
+```
+
+Change `server_name` to your actual server name, e.g., `chika.example.com`.
+
+```
+        server_name chika.example.com;
+```
+
+Save the file. 
+
 ### 11. Restart web server
+
+```
+systemctl restart nginx
+```
+
+```
+systemctl status nginx
+```
 
 ## v2rayN configuration method
 
