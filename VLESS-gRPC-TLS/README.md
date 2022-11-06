@@ -8,7 +8,11 @@ Forked from [https://github.com/chika0801/Xray-examples/blob/main/VLESS-gRPC-TLS
 
 Get a paid domain name. A cheap source is Namesilo. Create a DNS `A` record pointing from the hostname of your server (also known as its fully qualified domain name) to the IP address of your server. 
 
-### 2. Obtain SSL certificate and private key
+### 2. Firewall
+
+Open ports `80/tcp` and `443/tcp` on your server firewall.
+
+### 3. Obtain SSL certificate and private key
 
 After confirming that the DNS resolution has taken effect, execute the following commands (execute each command in sequence).
 
@@ -50,9 +54,7 @@ chown -R nobody:nogroup /etc/ssl/private/
 
 SSL certificates are valid for 90 days and are automatically renewed every 60 days. If the rate limit is exceeded, an error will be reported.
 
-### 3. Web server
-
-Open ports `80/tcp` and `443/tcp` on your server firewall.
+### 4. Install web server
 
 Install Nginx on the server:
 
@@ -61,6 +63,8 @@ apt update && apt upgrade -y
 
 apt install nginx -y
 ```
+
+### 5. Add web content
 
 Add some HTML pages under `/var/www/html` for camouflage purposes:
 
@@ -72,19 +76,19 @@ apt install git -y
 git clone -b gh-pages https://github.com/PavelDoGreat/WebGL-Fluid-Simulation /var/www/html
 ```
 
-### 4. Install Xray
+### 6. Install Xray
 
 ```
 bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release.sh)" @ install --beta
 ```
 
-### 5. Download configuration
+### 7. Download configuration
 
 ```
 curl -Lo /usr/local/etc/xray/config.json https://raw.githubusercontent.com/seakfind/examples/main/VLESS-gRPC-XTLS/config_server.json
 ```
 
-### 6. Restart the Xray service
+### 8. Restart the Xray service
 
 ```
 systemctl restart xray
@@ -100,9 +104,9 @@ systemctl status xray
 - View logs `journalctl -u xray --output cat -e`
 - Real-time log `journalctl -u xray --output cat -f`
 
-### 7. Reconfigure web server
+### 9. Reconfigure web server
 
-### 8. Restart web server
+### 10. Restart web server
 
 ## v2rayN configuration method
 
