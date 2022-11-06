@@ -110,7 +110,13 @@ systemctl status xray
 curl -Lo /etc/nginx/nginx.conf https://raw.githubusercontent.com/seakfind/examples/main/VLESS-gRPC-TLS/nginx.conf
 ```
 
-**On Debian-based systems, you must change the user in line 1 of `/etc/nginx/nginx.conf` from `nginx` to `www-data`.**
+On Debian-based systems, you must edit the user in line 1 of `/etc/nginx/nginx.conf` from `nginx` to `www-data`.
+
+```
+vi /etc/nginx/nginx.conf
+```
+
+If you have changed the file, then save it with your changes in it.
 
 ### 10. Restart web server
 
