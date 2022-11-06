@@ -33,7 +33,16 @@ vi /etc/nginx/sites-available/default
 Change `server_name` to your actual server name, e.g., `chika.example.com`.
 
 ```
+server {
+        listen 80 default_server;
+        listen [::]:80 default_server;
+        root /var/www/html;
+        index index.html index.htm index.nginx-debian.html;
         server_name chika.example.com;
+        location / {
+                try_files $uri $uri/ =404;
+        }
+}
 ```
 
 Save the file. Restart Nginx:
