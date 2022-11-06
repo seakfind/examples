@@ -12,7 +12,45 @@ Get a paid domain name. A cheap source is Namesilo. Create a DNS `A` record poin
 
 Open ports `80/tcp` and `443/tcp` on your server firewall.
 
-### 3. Obtain SSL certificate and private key
+### 4. Install web server
+
+Install Nginx on the server:
+
+```
+apt update && apt upgrade -y
+
+apt install nginx -y
+```
+
+### 5. Set server name
+
+Edit `/etc/nginx/sites-available/default`.
+
+```
+vi /etc/nginx/sites-available/default
+```
+
+Change `server_name` to your actual server name, e.g., `chika.example.com`.
+
+Save the file. Restart Nginx:
+
+```
+systemctl restart nginx
+```
+
+### 6. Add web content
+
+Add some HTML pages under `/var/www/html` for camouflage purposes:
+
+```
+rm /var/www/html/*
+
+apt install git -y
+
+git clone -b gh-pages https://github.com/PavelDoGreat/WebGL-Fluid-Simulation /var/www/html
+```
+
+### 7. Obtain SSL certificate and private key
 
 After confirming that the DNS resolution has taken effect, execute the following commands (execute each command in sequence).
 
@@ -39,7 +77,7 @@ acme.sh --set-default-ca --server letsencrypt
 ```
 
 ```
-acme.sh --issue -d chika.example.com --standalone --keylength ec-256
+acme.sh --issue -d chika.example.com --nginx --keylength ec-256
 ```
 
 ```
@@ -54,41 +92,19 @@ chown -R nobody:nogroup /etc/ssl/private/
 
 SSL certificates are valid for 90 days and are automatically renewed every 60 days. If the rate limit is exceeded, an error will be reported.
 
-### 4. Install web server
-
-Install Nginx on the server:
-
-```
-apt update && apt upgrade -y
-
-apt install nginx -y
-```
-
-### 5. Add web content
-
-Add some HTML pages under `/var/www/html` for camouflage purposes:
-
-```
-rm /var/www/html/*
-
-apt install git -y
-
-git clone -b gh-pages https://github.com/PavelDoGreat/WebGL-Fluid-Simulation /var/www/html
-```
-
-### 6. Install Xray
+### 8. Install Xray
 
 ```
 bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release.sh)" @ install --beta
 ```
 
-### 7. Download configuration
+### 9. Download configuration
 
 ```
 curl -Lo /usr/local/etc/xray/config.json https://raw.githubusercontent.com/seakfind/examples/main/VLESS-gRPC-XTLS/config_server.json
 ```
 
-### 8. Restart the Xray service
+### 10. Restart the Xray service
 
 ```
 systemctl restart xray
@@ -104,9 +120,9 @@ systemctl status xray
 - View logs `journalctl -u xray --output cat -e`
 - Real-time log `journalctl -u xray --output cat -f`
 
-### 9. Reconfigure web server
+### 11. Reconfigure web server
 
-### 10. Restart web server
+### 12. Restart web server
 
 ## v2rayN configuration method
 
