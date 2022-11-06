@@ -2,6 +2,8 @@
 
 Forked from [https://github.com/chika0801/Xray-examples/blob/main/VLESS-gRPC-TLS](https://github.com/chika0801/Xray-examples/blob/main/VLESS-gRPC-TLS)
 
+## Server configuration method
+
 1. Install Xray
 
 ```
