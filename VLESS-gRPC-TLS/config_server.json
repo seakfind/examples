@@ -1,0 +1,55 @@
+{
+    "log": {
+        "loglevel": "warning"
+    },
+    "routing": {
+        "domainStrategy": "IPIfNonMatch",
+        "rules": [
+            {
+                "type": "field",
+                "ip": [
+                    "geoip:cn",
+                    "geoip:private"
+                ],
+                "outboundTag": "block"
+            }
+        ]
+    },
+    "inbounds": [
+        {
+            "listen": "/dev/shm/grpc.socket,0666",
+            "protocol": "vless",
+            "settings": {
+                "clients": [
+                    {
+                        "id": "chika"
+                    }
+                ],
+                "decryption": "none"
+            },
+            "streamSettings": {
+                "network": "grpc",
+                "grpcSettings": {
+                    "serviceName": "lovelive"
+                }
+            },
+            "sniffing": {
+                "enabled": true,
+                "destOverride": [
+                    "http",
+                    "tls"
+                ]
+            }
+        }
+    ],
+    "outbounds": [
+        {
+            "protocol": "freedom",
+            "tag": "direct"
+        },
+        {
+            "protocol": "blackhole",
+            "tag": "block"
+        }
+    ]
+}
