@@ -32,6 +32,10 @@ vi /etc/nginx/sites-available/default
 
 Change `server_name` to your actual server name, e.g., `chika.example.com`.
 
+```
+        server_name chika.example.com;
+```
+
 Save the file. Restart Nginx:
 
 ```
