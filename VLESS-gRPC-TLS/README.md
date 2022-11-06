@@ -105,7 +105,7 @@ bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release
 ### 8. Download configuration
 
 ```
-curl -Lo /usr/local/etc/xray/config.json https://raw.githubusercontent.com/seakfind/examples/main/VLESS-gRPC-XTLS/config_server.json
+curl -Lo /usr/local/etc/xray/config.json https://raw.githubusercontent.com/seakfind/examples/main/VLESS-gRPC-TLS/config_server.json
 ```
 
 ### 9. Restart the Xray service
