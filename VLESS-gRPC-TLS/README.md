@@ -4,11 +4,11 @@ Forked from [https://github.com/chika0801/Xray-examples/blob/main/VLESS-gRPC-TLS
 
 ## Server configuration method
 
-1. Domain
+###1. Domain
 
 Get a paid domain name. A cheap source is Namesilo. When you have your domain name, add your domain to Cloudflare Content Distribution Network (CDN). A CDN conceals your server's IP address. Select the Free plan. Cloudflare will tell you the new nameservers to use. At your domain name registrar, change the nameservers to be Cloudflare nameservers. You may need to wait up to 24 hours for this change to take effect. Once added, go to the DNS page in Cloudflare. Create a DNS A record pointing from the hostname of your server (also known as its fully qualified domain name) to the IP address of your server. Leave proxying off (i.e., Proxy status DNS only) for now.
 
-2. Web server
+### 2. Web server
 
 Open ports `80/tcp` and `443/tcp` on your server firewall.
 
@@ -59,7 +59,7 @@ apt install git -y
 git clone -b gh-pages https://github.com/PavelDoGreat/WebGL-Fluid-Simulation /var/www/html
 ```
 
-3. Obtain SSL certificate and private key
+### 3. Obtain SSL certificate and private key
 
 After confirming that the DNS resolution has taken effect, execute the following commands (execute each command in sequence).
 
@@ -101,19 +101,19 @@ chown -R nobody:nogroup /etc/ssl/private/
 
 SSL certificates are valid for 90 days and are automatically renewed every 60 days. If the rate limit is exceeded, an error will be reported.
 
-4. Install Xray
+### 4. Install Xray
 
 ```
 bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release.sh)" @ install --beta
 ```
 
-5. Download configuration
+### 5. Download configuration
 
 ```
 curl -Lo /usr/local/etc/xray/config.json https://raw.githubusercontent.com/seakfind/examples/main/VLESS-gRPC-XTLS/config_server.json
 ```
 
-6. Start the Xray service
+### 6. Restart the Xray service
 
 ```
 systemctl restart xray
