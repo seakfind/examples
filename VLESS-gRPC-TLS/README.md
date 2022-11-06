@@ -127,7 +127,7 @@ systemctl status xray
 ### 10. Reconfigure web server
 
 ```
-curl -Lo /etc/nginx/sites-available/nginx.conf https://raw.githubusercontent.com/seakfind/examples/main/VLESS-gRPC-TLS/nginx.conf
+curl -Lo /etc/nginx/sites-available/default https://raw.githubusercontent.com/seakfind/examples/main/VLESS-gRPC-TLS/nginx.conf
 ```
 
 Edit `/etc/nginx/sites-available/default`.
