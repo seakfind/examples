@@ -4,7 +4,7 @@ Forked from [https://github.com/chika0801/Xray-examples/blob/main/VLESS-gRPC-TLS
 
 ## Server configuration method
 
-###1. Domain
+### 1. Domain
 
 Get a paid domain name. A cheap source is Namesilo. When you have your domain name, add your domain to Cloudflare Content Distribution Network (CDN). A CDN conceals your server's IP address. Select the Free plan. Cloudflare will tell you the new nameservers to use. At your domain name registrar, change the nameservers to be Cloudflare nameservers. You may need to wait up to 24 hours for this change to take effect. Once added, go to the DNS page in Cloudflare. Create a DNS A record pointing from the hostname of your server (also known as its fully qualified domain name) to the IP address of your server. Leave proxying off (i.e., Proxy status DNS only) for now.
 
