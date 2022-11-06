@@ -130,4 +130,4 @@ systemctl status nginx
 
 ## v2rayN configuration method
 
-![VLESS-gRPC-TLS](https://user-images.githubusercontent.com/88967758/180817492-7c165cd0-2d65-4901-85c5-c07f1b39e8c7.jpg)
+![VLESS-gRPC-TLS](https://github.com/seakfind/examples/blob/main/VLESS-gRPC-TLS/v2rayn-vless-grpc-tls.png?raw=true)
