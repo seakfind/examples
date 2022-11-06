@@ -22,36 +22,7 @@ apt update && apt upgrade -y
 apt install nginx -y
 ```
 
-### 4. Set server name
-
-Edit `/etc/nginx/sites-available/default`.
-
-```
-vi /etc/nginx/sites-available/default
-```
-
-Change `server_name` to your actual server name, e.g., `chika.example.com`.
-
-```
-server {
-        listen 80 default_server;
-        listen [::]:80 default_server;
-        root /var/www/html;
-        index index.html index.htm index.nginx-debian.html;
-        server_name chika.example.com;
-        location / {
-                try_files $uri $uri/ =404;
-        }
-}
-```
-
-Save the file. Restart Nginx:
-
-```
-systemctl restart nginx
-```
-
-### 5. Add web content
+### 4. Add web content
 
 Add some HTML pages under `/var/www/html` for camouflage purposes:
 
@@ -63,7 +34,7 @@ apt install git -y
 git clone -b gh-pages https://github.com/PavelDoGreat/WebGL-Fluid-Simulation /var/www/html
 ```
 
-### 6. Obtain SSL certificate and private key
+### 5. Obtain SSL certificate and private key
 
 After confirming that the DNS resolution has taken effect, execute the following commands (execute each command in sequence).
 
@@ -105,19 +76,19 @@ chown -R nobody:nogroup /etc/ssl/private/
 
 SSL certificates are valid for 90 days and are automatically renewed every 60 days. If the rate limit is exceeded, an error will be reported.
 
-### 7. Install Xray
+### 6. Install Xray
 
 ```
 bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release.sh)" @ install --beta
 ```
 
-### 8. Download configuration
+### 7. Download configuration
 
 ```
 curl -Lo /usr/local/etc/xray/config.json https://raw.githubusercontent.com/seakfind/examples/main/VLESS-gRPC-TLS/config_server.json
 ```
 
-### 9. Restart the Xray service
+### 8. Restart the Xray service
 
 ```
 systemctl restart xray
@@ -133,13 +104,13 @@ systemctl status xray
 - View logs `journalctl -u xray --output cat -e`
 - Real-time log `journalctl -u xray --output cat -f`
 
-### 10. Reconfigure web server
+### 9. Reconfigure web server
 
 ```
 curl -Lo /etc/nginx/nginx.conf https://raw.githubusercontent.com/seakfind/examples/main/VLESS-gRPC-TLS/nginx.conf
 ```
 
-### 11. Restart web server
+### 10. Restart web server
 
 ```
 systemctl restart nginx
