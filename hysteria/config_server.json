@@ -1,0 +1,13 @@
+{
+    "protocol": "udp",
+    "listen": ":19732",
+    "cert": "/etc/letsencrypt/live/hy.example.com/fullchain.pem",
+    "key": "/etc/letsencrypt/live/hy.example.com/privkey.pem",
+    "alpn": "h3",
+    "auth": {
+        "mode": "password",
+        "config": {
+            "password": "Nmtwgq5GdLJ1l2GHzOhJXAwbH2YZETm5"
+        }
+    }
+}
