@@ -1,0 +1,12 @@
+{
+    "protocol": "udp",
+    "server": "VPS IPv4 address:19732",
+    "server_name": "hy.example.com",
+    "alpn": "h3",
+    "up_mbps": 16,
+    "down_mbps": 160,
+    "auth_str": "Nmtwgq5GdLJ1l2GHzOhJXAwbH2YZETm5",
+    "socks5": {
+        "listen": "127.0.0.1:10808"
+    }
+}
