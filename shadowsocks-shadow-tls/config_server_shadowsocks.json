@@ -1,0 +1,8 @@
+{
+  "server": "127.0.0.1",
+  "mode": "tcp_and_udp",
+  "server_port": 8002,
+  "password": "z3LJ8yYOEKB7tPFy",
+  "timeout": 86400,
+  "method": "chacha20-ietf-poly1305",
+}
