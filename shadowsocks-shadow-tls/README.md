@@ -2,7 +2,7 @@
 
 Shadow-TLS presents to the outside observer a real TLS handshake with a trusted site. This obscures the fact that data for the true destination is being transferred behind the scenes. The concept is illustrated in a diagram in the [docs](https://github.com/ihciah/shadow-tls/blob/master/docs/protocol-en.md), _quod vide_. 
 
-Shadow-TLS is available for macOS and Linux but _not for Windows_.
+Shadow-TLS is available for macOS and Linux _but not for Windows_.
 
 In the scenario in this example:
 
