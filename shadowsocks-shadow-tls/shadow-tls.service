@@ -1,0 +1,11 @@
+[Unit]
+Description=Shadow-TLS Server
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/shadow-tls-x86_64-unknown-linux-musl server --listen 0.0.0.0:443 --password tmZhXnRPOKD1DG7V --server 127.0.0.1:8002 --tls cloud.tencent.com:443
+
+[Install]
+WantedBy=multi-user.target
