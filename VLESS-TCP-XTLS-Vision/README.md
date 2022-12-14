@@ -16,6 +16,14 @@ bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release
 curl -Lo /usr/local/etc/xray/config.json https://raw.githubusercontent.com/seakfind/examples/main/VLESS-TCP-XTLS-Vision/config_server.json
 ```
 
+Edit `/usr/local/etc/xray/config.json`.
+
+Replace port number by your choice of port number.
+
+Replace id by your choice of id from https://www.uuidgenerator.net.
+
+Save the file.
+
 3. Obtain SSL certificate and private key
 
 You first need to buy a domain name, then add a subdomain and point the subdomain to the IP of your VPS. Wait 5-10 minutes for DNS resolution to take effect. You can check if the returned IP is correct by pinging your subdomain. After confirming that the DNS resolution has taken effect, execute the following commands (execute each command in sequence).
@@ -47,9 +55,7 @@ acme.sh --issue -d chika.example.com --standalone --keylength ec-256
 ```
 
 ```
-acme.sh --install-cert -d chika.example.com --ecc \
---fullchain-file /etc/ssl/private/fullchain.cer \
---key-file /etc/ssl/private/private.key
+acme.sh --install-cert -d chika.example.com --ecc --fullchain-file /etc/ssl/private/fullchain.cer --key-file /etc/ssl/private/private.key
 ```
 
 ```
