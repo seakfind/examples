@@ -58,7 +58,9 @@ unzip trojan-go-linux-amd64.zip
 
 ## 9. Create config.json file
 
+```
 curl -Lo config.json https://raw.githubusercontent.com/seakfind/examples/main/Trojan-Go/config_server.json
+```
 
 Edit `config.json`.
 
