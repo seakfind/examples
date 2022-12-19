@@ -52,7 +52,9 @@ wget https://github.com/p4gefau1t/trojan-go/releases/download/v0.10.6/trojan-go-
 
 ## 8. Unzip trojan-go
 
+```
 unzip trojan-go-linux-amd64.zip
+```
 
 ## 9. Create config.json file
 
