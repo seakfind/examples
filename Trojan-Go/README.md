@@ -186,4 +186,8 @@ systemctl status trojan-go
 
 Apply CDN proxying (orange cloud in Cloudflare) and SSL/TLS mode Full.
 
+# Client
+
+Screenshot below shows v2rayN client on Windows.
+
 ![v2rayn-trojan-go](https://user-images.githubusercontent.com/90979794/208422007-3898ea8d-c5e0-46fd-8acc-c969d840b1fa.png)
