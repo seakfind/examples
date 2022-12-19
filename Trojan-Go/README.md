@@ -37,7 +37,7 @@ mkdir /etc/trojan-go
 ## 6. Enter trojan-go folder
 
 ```
-cd /etc/trojan-go/
+cd /etc/trojan-go
 ```
 
 ## 7. Download trojan-go
