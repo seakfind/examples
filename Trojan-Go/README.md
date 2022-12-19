@@ -6,7 +6,7 @@ YouTube video tutorial [https://www.youtube.com/watch?v=UXuXC3TOlyU](https://www
 
 ## 0. Starting point
 
-You have a virtual private server (VPS), domain name, and a DNS record pointing from fully qualified domain name of server to IP address of server.
+You have a virtual private server (VPS), a domain name, and a DNS record pointing from fully qualified domain name of server to IP address of server.
 
 ## 1. Open firewall
 
