@@ -114,10 +114,12 @@ For IPv6-only server:
 acme.sh --issue -d your-domain-name.com --listen-v6 --standalone --keylength ec-256
 ```
 
-## 15. Install certificate:
+## 15. Install certificate
+
+Replace `your-domain-name.com` by your actual server fully qualified domain name.
 
 ```
-acme.sh --install-cert -d your domain --ecc --key-file /etc/trojan-go/server.key --fullchain-file /etc/trojan-go/server.crt
+acme.sh --install-cert -d your-domain-name.com --ecc --key-file /etc/trojan-go/server.key --fullchain-file /etc/trojan-go/server.crt
 ```
 
 ## 16. Install Nginx
