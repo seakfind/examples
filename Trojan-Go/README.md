@@ -184,4 +184,4 @@ systemctl status trojan-go
 
 ## 25. CDN
 
-Apply CDN proxying (orange cloud in Cloudflare) and SSL mode full.
+Apply CDN proxying (orange cloud in Cloudflare) and SSL/TLS mode Full.
