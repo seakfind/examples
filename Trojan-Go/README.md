@@ -152,7 +152,7 @@ systemctl reload nginx
 systemctl status nginx
 ```
 
-20. Create trojan-go.service file
+## 20. Create trojan-go.service file
 
 ```
 curl -Lo /etc/systemd/system/trojan-go.service https://raw.githubusercontent.com/seakfind/examples/main/Trojan-Go/trojan-go.service
