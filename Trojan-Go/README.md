@@ -4,6 +4,10 @@ Forked from [https://www.losem.tk/948](https://www.losem.tk/948).
 
 YouTube video tutorial [https://www.youtube.com/watch?v=UXuXC3TOlyU](https://www.youtube.com/watch?v=UXuXC3TOlyU).
 
+## 0. Starting point
+
+You have a virtual private server (VPS), domain name, and a DNS record pointing from fully qualified domain name of server to IP address of server.
+
 ## 1. Open firewall
 
 Either disable your firewall completely, or open ports 22/tcp (SSH), 80/tcp (HTTP), and 443/tcp (HTTPS).
@@ -175,3 +179,7 @@ systemctl start trojan-go
 ```
 systemctl status trojan-go
 ```
+
+## 25. CDN
+
+Apply CDN proxying (orange cloud in Cloudflare) and SSL mode full.
